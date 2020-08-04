@@ -11,6 +11,18 @@ public class Date {
         this.date = date;
     }
 
+    @Override
+    public String toString() {
+        return "Date{" +
+                "dateTimestamp=" + dateTimestamp +
+                ", date='" + date + '\'' +
+                '}';
+    }
+
+    public Date() {
+
+    }
+
     public Timestamp getDateTimestamp() {
         return dateTimestamp;
     }

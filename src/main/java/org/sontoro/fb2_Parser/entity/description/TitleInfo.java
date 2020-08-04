@@ -120,4 +120,21 @@ public class TitleInfo {
     public void setSequence(List<String> sequence) {
         this.sequence = sequence;
     }
+
+    @Override
+    public String toString() {
+        return "TitleInfo{" +
+                "genre=" + genre +
+                ", author=" + author +
+                ", bookTitle='" + bookTitle + '\'' +
+                ", annotation='" + annotation + '\'' +
+                ", keywords='" + keywords + '\'' +
+                ", date=" + date +
+                ", coverPage='" + coverPage + '\'' +
+                ", lang='" + lang + '\'' +
+                ", srcLang='" + srcLang + '\'' +
+                ", translator=" + translator +
+                ", sequence=" + sequence +
+                '}';
+    }
 }
