@@ -1,13 +1,15 @@
 package org.sontoro.fb2_Parser.entity.description;
 
-public class Description {
-    private TitleInfo titleInfo; // Одно и только одно вхождение
-    private TitleInfo srcTitleInfo; // От нуля до одного вхождения
-    private DocumentInfo documentInfo; // Одно и только одно вхождение
-    private PublishInfo publishInfo; // От нуля до одного вхождения
-    private String customInfo; // Любое число вхождений
+import java.util.List;
 
-    public Description(TitleInfo titleInfo, TitleInfo srcTitleInfo, DocumentInfo documentInfo, PublishInfo publishInfo, String customInfo) {
+public class Description {
+    private TitleInfo titleInfo;       //1
+    private TitleInfo srcTitleInfo;    //0-1
+    private DocumentInfo documentInfo; //1
+    private PublishInfo publishInfo;   //0-1
+    private List<String> customInfo;         //0-n
+
+    public Description(TitleInfo titleInfo, TitleInfo srcTitleInfo, DocumentInfo documentInfo, PublishInfo publishInfo, List<String> customInfo) {
         this.titleInfo = titleInfo;
         this.srcTitleInfo = srcTitleInfo;
         this.documentInfo = documentInfo;
@@ -50,11 +52,11 @@ public class Description {
         this.publishInfo = publishInfo;
     }
 
-    public String getCustomInfo() {
+    public List<String> getCustomInfo() {
         return customInfo;
     }
 
-    public void setCustomInfo(String customInfo) {
+    public void setCustomInfo(List<String> customInfo) {
         this.customInfo = customInfo;
     }
 }
