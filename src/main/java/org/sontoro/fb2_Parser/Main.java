@@ -2,17 +2,12 @@ package org.sontoro.fb2_Parser;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
-import org.sontoro.fb2_Parser.entity.description.TitleInfo;
-import org.sontoro.fb2_Parser.repository.FileRepository;
-import org.sontoro.fb2_Parser.service.Parser;
 import org.sontoro.fb2_Parser.service.XmlReader;
 
 import java.io.IOException;
 
 class Main {
 	public static void main(String[] args) {
-		Parser parser = new Parser();
-		FileRepository fileRepository = new FileRepository();
 		XmlReader xmlReader = new XmlReader();
 
 
@@ -28,7 +23,5 @@ class Main {
 		} catch (DocumentException e) {
 			e.printStackTrace();
 		}
-		TitleInfo titleInfo = xmlReader.getTitleInfoByDocumentByDom4J(document);
-		System.out.println(titleInfo.toString());
 	}
 }
