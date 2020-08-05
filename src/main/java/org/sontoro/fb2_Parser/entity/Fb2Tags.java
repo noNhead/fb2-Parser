@@ -9,7 +9,7 @@ import java.util.List;
 public class Fb2Tags {
     private String description; //One and only one occurrence
 
-    //Description field
+    //getDescription field
     private TitleInfo titleInfo; //One and only one occurrence
     private TitleInfo srcTitleInfo; //From zero to one occurrence
 
